@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     //filterAndPrint(taskList);
 
     const populate_task_list_ul = function(tasks){
+        let index = 0;
         for (let p of tasks) {
             //console.log(p);
             //create li
@@ -53,11 +54,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
             let inputCheck = document.createElement("input");
             inputCheck.setAttribute("type", "checkbox");
             inputCheck.className = "custom-control-input";
-            inputCheck.setAttribute("id", "check-t1");
+            inputCheck.setAttribute("id", "check-t"+index);
             //create label
             let label = document.createElement("label");
             label.className = "custom-control-label";
-            label.setAttribute("for", "check-t1");
+            label.setAttribute("for", "check-t"+index);
             label.innerText = p.description; //task description
             //create small (date)
             let small = document.createElement("small");
@@ -71,6 +72,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             //
             li.appendChild(wrapperDiv);
             task_list_ul.appendChild(li);
+            index = index + 1;
         }
     }
     populate_task_list_ul(taskList.list);
