@@ -27,12 +27,17 @@ function Task(id, description, isUrgent = false, isPrivate = true, deadline = ''
     return this.deadline ? this.deadline.format(format) : '<not defined>';
   }
   this.isToday = ()=>{
-    if(this.deadline.isToday())
+    if(this.deadline === '')
+      return false
+    let today = dayjs()
+    if(this.deadline.isSame(today, 'day'))
       return true;
     else
       return false;
   }
   this.isNextWeek = () =>{
+    if(this.deadline === '')
+    return false
     let today = dayjs();
     let nextWeek = today.add(7, 'day');
     if(this.deadline.isBefore(nextWeek) && this.deadline.isAfter(today))

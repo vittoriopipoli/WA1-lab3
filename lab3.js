@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const t4 = new Task(4, "kebabbone", 1, 0, "2021-03-27T15:20:00.000Z")
     const t5 = new Task(5, "read the Holy Bible", 1, 1, "2021-03-29T15:20:00.000Z")
     const t6 = new Task(6, "sing a song", 0, 0, "2021-03-31T15:20:00.000Z")
+    const t7 = new Task(7, "schedina all'EUROBET", 1, 0, "2021-04-20T15:20:00.000Z")
 
     // create the task list and add the dummy tasks
     const taskList = new TaskList();
@@ -26,6 +27,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     taskList.add(t4);
     taskList.add(t5);
     taskList.add(t6);
+    taskList.add(t7);
 
    
 
