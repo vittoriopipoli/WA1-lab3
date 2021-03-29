@@ -5,7 +5,7 @@
 //import dayjs from 'dayjs';
 // require removed, we cant use it now
 //import isToday from 'node_modules/dayjs/plugin/'
-
+console.log("func");
 
 
 function Task(id, description, isUrgent = false, isPrivate = true, deadline = '') {

@@ -1,6 +1,9 @@
 "use strict";
 
 
+console.log("lab3.js");
+
+
 // even if it s not the first line of JS code
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -118,3 +121,4 @@ document.addEventListener("DOMContentLoaded", (event) => {
         populate_task_list_ul(taskList.filterByPrivate());
     })
 })
+
